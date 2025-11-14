@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Una Invitación</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+    <div class="hearts" id="hearts"></div>
+    
+    <div class="container">
+        <div class="top-decoration">
+            <span>✨</span>
+            <span>💖</span>
+            <span>✨</span>
+        </div>
+        
+        <div class="emoji-main">💝</div>
+        <h1>Una Invitación Especial</h1>
+        <p class="subtitle">Para Brenda Tatiana Cortez Huachouillca</p>
+        
+        <div class="divider"></div>
+        
+        <div class="message">
+            <p>Tati, amor de mais lais &#x10E6</p>
+            <p>Desde hace tiempo me he dado cuenta que los momentos que hemos pasado juntos han sido inolvidables, quiza no tengamos muchas aventuras, pero quisiera poder construir mas de las que tenemos.</p>
+            <p class="highlight-text">Por eso, me encantaría pasar una noche especial contigo...</p>
+        </div>
+
+        <div class="date-box" onclick="showCalendar()">
+            <span class="date-icon">📅</span>
+            <div>Este Domingo</div>
+            <div style="font-size: 18px; margin-top: 8px; opacity: 0.9;">Haz clic para ver la fecha y hora</div>
+        </div>
+
+        <div class="question">
+            ¿Aceptas? 🌹
+        </div>
+
+        <div class="buttons-container" id="buttonsContainer">
+            <div class="button-wrapper">
+                <button class="button" onclick="showResponse()">¡Sí, claro! 💕</button>
+            </div>
+            <div class="button-wrapper" id="noButtonWrapper">
+                <button class="button button-no" id="noButton" onmouseover="moveNoButton()" ontouchstart="moveNoButton()" onclick="moveNoButton()">No puedo 😔</button>
+            </div>
+        </div>
+
+        <div id="response" class="response hidden">
+            <h2>¡Sabía que dirías que sí!</h2>
+            <div class="celebration">🥰🎊💖🎉</div>
+            <p>¡Será una noche increíble juntos!</p>
+            <p style="margin-top: 15px; font-size: 18px;">Prepárate para un momento especial juntos... 💫</p>
+        </div>
+    </div>
+
+    <div id="calendarModal" class="modal" onclick="closeCalendarOutside(event)">
+        <div class="calendar-container" onclick="event.stopPropagation()">
+            <div class="calendar-header">
+                <h2>📅 Noviembre 2025</h2>
+                <p class="calendar-subtitle">Nuestra cita especial está marcada con 💕</p>
+            </div>
+            
+            <div class="calendar-grid">
+                <div class="calendar-day header">Dom</div>
+                <div class="calendar-day header">Lun</div>
+                <div class="calendar-day header">Mar</div>
+                <div class="calendar-day header">Mié</div>
+                <div class="calendar-day header">Jue</div>
+                <div class="calendar-day header">Vie</div>
+                <div class="calendar-day header">Sáb</div>
+                
+                <div class="calendar-day"></div>
+                <div class="calendar-day"></div>
+                <div class="calendar-day"></div>
+                <div class="calendar-day"></div>
+                <div class="calendar-day"></div>
+                <div class="calendar-day"></div>
+                <div class="calendar-day">1</div>
+                
+                <div class="calendar-day">2</div>
+                <div class="calendar-day">3</div>
+                <div class="calendar-day">4</div>
+                <div class="calendar-day">5</div>
+                <div class="calendar-day">6</div>
+                <div class="calendar-day">7</div>
+                <div class="calendar-day">8</div>
+                
+                <div class="calendar-day">9</div>
+                <div class="calendar-day">10</div>
+                <div class="calendar-day">11</div>
+                <div class="calendar-day">12</div>
+                <div class="calendar-day">13</div>
+                <div class="calendar-day">14</div>
+                <div class="calendar-day">15</div>
+                
+                <div class="calendar-day marked">16<br>💕</div>
+                <div class="calendar-day">17</div>
+                <div class="calendar-day">18</div>
+                <div class="calendar-day">19</div>
+                <div class="calendar-day">20</div>
+                <div class="calendar-day">21</div>
+                <div class="calendar-day">22</div>
+                
+                <div class="calendar-day">23</div>
+                <div class="calendar-day">24</div>
+                <div class="calendar-day">25</div>
+                <div class="calendar-day">26</div>
+                <div class="calendar-day">27</div>
+                <div class="calendar-day">28</div>
+                <div class="calendar-day">29</div>
+                
+                <div class="calendar-day">30</div>
+            </div>
+            
+            <div class="time-display">
+                <span class="time-icon">🕕</span>
+                <div>6:00 PM</div>
+                <div style="font-size: 16px; margin-top: 8px; opacity: 0.9;">Puntual corazon 💝</div>
+            </div>
+            
+            <center>
+                <button class="close-modal" onclick="closeCalendar()">Entendido ✨</button>
+            </center>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
